@@ -1,2 +1,2 @@
 # my
-Website for marianne.,yoga
+Website for marianne.yoga
