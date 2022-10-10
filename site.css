@@ -1,4 +1,230 @@
-body {
-  background: #333;
-  color: #fff;
+:root {
+  --content: #000;
+  --background: #fff;
+  --background-alt: #afa6ce;
 }
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("josefinSans-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 1 999;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bodoni Moda";
+  src: url("BodoniModa-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 400 999;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fira Mono";
+  src: url("FiraMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  background: var(--background);
+}
+
+body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-size: 100%;
+  font-family: "Josefin Sans";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  font-variation-settings: "wght" 400;
+  background: var(--background-alt);
+}
+body * {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  border: none;
+  background: none;
+  outline: none;
+  list-style-type: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.punctuation {
+  font-family: "Bodoni Moda";
+}
+
+main {
+  flex: 1;
+  margin: 4rem 20vw;
+}
+main h2, main p, main a {
+  font-size: 1.36rem;
+  color: var(--content);
+  font-variation-settings: "wght" 200;
+}
+main h2 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+main h2 span {
+  position: relative;
+  z-index: 1;
+}
+main h2 span:first-child {
+  transform: translateX(4rem);
+  margin-bottom: 0.3rem;
+}
+main h2 span:nth-child(2) {
+  transform: translateX(-2rem);
+}
+main h2 span.punctuation {
+  color: var(--background);
+  font-size: 7rem;
+  position: absolute;
+  left: 14rem;
+  bottom: -3.5rem;
+  z-index: 0;
+  opacity: 0.3;
+}
+main p {
+  margin: 1rem -2rem;
+}
+main a {
+  text-decoration: none;
+  position: relative;
+  transition: font-variation-settings 0.15s;
+}
+main a span {
+  position: relative;
+  z-index: 1;
+  padding: 0 0.3rem;
+}
+main a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 0.6rem;
+  background: turquoise;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+main a:hover {
+  font-variation-settings: "wght" 350;
+}
+main a:hover:before {
+  opacity: 1;
+}
+
+header {
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 20vw 20vw 0;
+  z-index: 1000;
+  position: relative;
+  transition: all 0.45s ease-out;
+  font-variation-settings: "wght" 200;
+}
+header svg {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: -12vw;
+  left: 10rem;
+  background: var(--background);
+  border-radius: 50%;
+  overflow: hidden;
+  outline: 0.3rem solid var(--background-alt);
+  outline-offset: -0.2rem;
+}
+header svg .accent {
+  fill: #68E9D1;
+}
+header svg .accent2 {
+  fill: #B89DE0;
+}
+header h1 {
+  display: grid;
+  font-size: 1.36rem;
+  position: relative;
+  grid-template-columns: 18rem;
+}
+header h1 > span {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  margin: 0 0 1rem 0.3rem;
+  font-variation-settings: "wght" 350;
+  color: var(--background);
+}
+header h1 > span.punctuation {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  font-size: 400%;
+  font-variation-settings: "wght" 450;
+  position: absolute;
+  bottom: -1rem;
+  right: -1.3rem;
+  z-index: 0;
+}
+header h1 > span.punctuation:last-child {
+  font-size: 1200%;
+  bottom: -9.6rem;
+  right: 2.2rem;
+  font-variation-settings: "wght" 700;
+}
+header h1 strong {
+  z-index: 10;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  position: relative;
+  color: var(--content);
+  transition: all 0.2s;
+  letter-spacing: -0.2rem;
+  color: turquoise;
+  font-size: 4rem;
+  justify-self: center;
+  font-variation-settings: "wght" 250;
+  text-shadow: -0.2rem 0.2rem 0 var(--content);
+}
+
+footer {
+  font-size: 0.68rem;
+  font-family: "Fira Mono";
+  font-weight: normal;
+  display: flex;
+  min-height: 3rem;
+  padding: 0 5vw;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  z-index: 2000;
+  background: var(--background);
+}
+
+#top {
+  position: absolute;
+  top: 0px;
+  height: 1px;
+  width: 100%;
+  background: yellow;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=site.css.map */
