@@ -69,6 +69,7 @@ main {
   margin: 4rem auto;
 }
 main h2, main p, main a {
+  margin: 0 5vw;
   font-size: 1.36rem;
   color: var(--content);
   font-variation-settings: "wght" 200;
@@ -83,11 +84,11 @@ main h2 span {
   z-index: 1;
 }
 main h2 span:first-child {
-  transform: translateX(4rem);
+  align-self: flex-end;
   margin-bottom: 0.3rem;
 }
 main h2 span:nth-child(2) {
-  transform: translateX(-2rem);
+  align-self: flex-start;
 }
 main h2 span.punctuation {
   color: var(--background);
@@ -99,13 +100,13 @@ main h2 span.punctuation {
   opacity: 0.3;
 }
 main p {
-  margin: 1rem -2rem;
+  margin-top: 1rem;
   text-align: center;
 }
 main a {
   text-decoration: none;
   position: relative;
-  display: inline-block;
+  display: block;
   transition: font-variation-settings 0.15s;
 }
 main a span {
