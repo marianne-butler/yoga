@@ -23,7 +23,7 @@
   font-style: normal;
 }
 html {
-  background: var(--background);
+  background: var(--background-alt);
 }
 
 body {
@@ -66,7 +66,7 @@ body * {
 
 main {
   flex: 1;
-  margin: 4rem 20vw;
+  margin: 4rem auto;
 }
 main h2, main p, main a {
   font-size: 1.36rem;
@@ -137,7 +137,7 @@ header {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  margin: 20vw 20vw 0;
+  margin: calc(60vh - 15rem) auto 0;
   z-index: 1000;
   position: relative;
   transition: all 0.45s ease-out;
@@ -147,13 +147,12 @@ header svg {
   width: 6rem;
   height: 6rem;
   position: absolute;
-  top: -12vw;
+  top: -12vh;
   left: 10rem;
-  background: var(--background);
-  border-radius: 50%;
-  overflow: hidden;
-  outline: 0.3rem solid var(--background-alt);
-  outline-offset: -0.2rem;
+}
+header svg circle {
+  fill: var(--background);
+  opacity: 0.5;
 }
 header svg .accent {
   fill: #68E9D1;
