@@ -100,10 +100,12 @@ main h2 span.punctuation {
 }
 main p {
   margin: 1rem -2rem;
+  text-align: center;
 }
 main a {
   text-decoration: none;
   position: relative;
+  display: inline-block;
   transition: font-variation-settings 0.15s;
 }
 main a span {
