@@ -160,10 +160,10 @@ header svg circle {
   opacity: 0.7;
 }
 header svg .accent {
-  fill: #68E9D1;
+  fill: turquoise;
 }
 header svg .accent2 {
-  fill: #B89DE0;
+  fill: magenta;
 }
 header h1 {
   display: grid;
