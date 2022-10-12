@@ -69,6 +69,7 @@ a {
   position: relative;
   display: block;
   transition: font-variation-settings 0.15s;
+  color: inherit;
 }
 a span {
   position: relative;
