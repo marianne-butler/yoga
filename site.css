@@ -26,6 +26,10 @@ html {
   background: var(--background-alt);
 }
 
+iframe {
+  border-radius: 0 !important;
+}
+
 body {
   position: fixed;
   top: 0;
@@ -69,7 +73,9 @@ a {
   position: relative;
   display: block;
   transition: font-variation-settings 0.15s;
-  color: inherit;
+}
+a:link, a:visited, a:hover, a:active {
+  color: var(--content);
 }
 a span {
   position: relative;
