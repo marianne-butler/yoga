@@ -1,0 +1,162 @@
+:root {
+  --content: #000;
+  --background: #fff;
+  --background-alt: #E6E6FA;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("josefinSans-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 1 999;
+  font-style: normal;
+}
+html {
+  background: var(--background-alt);
+}
+
+body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-size: 100%;
+  font-family: "Josefin Sans";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  font-variation-settings: "wght" 400;
+  background: var(--background-alt);
+}
+body * {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  border: none;
+  background: none;
+  outline: none;
+  list-style-type: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  transition: font-variation-settings 0.15s;
+}
+a:link, a:visited, a:hover, a:active {
+  color: var(--content);
+}
+a span {
+  position: relative;
+  z-index: 1;
+  padding: 0 0.3rem;
+}
+a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 0.6rem;
+  background: turquoise;
+  opacity: 0.5;
+  transition: opacity 0.15s;
+}
+a:hover {
+  font-variation-settings: "wght" 350;
+}
+a:hover:before {
+  opacity: 1;
+}
+footer a:before {
+  height: 0.3rem;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+main:before {
+  content: "";
+  background-image: url("marianne.png");
+  background-size: cover;
+  background-position: right bottom;
+  margin-bottom: 3rem;
+}
+main iframe {
+  width: 100vw;
+  max-width: 700px;
+  margin-left: auto;
+  border-radius: 0 !important;
+  background: transparent;
+}
+
+header {
+  pointer-events: none;
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 200000;
+}
+header svg {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+header svg circle {
+  fill: var(--background);
+  opacity: 0.7;
+}
+header svg .accent {
+  fill: turquoise;
+}
+header svg .accent2 {
+  fill: magenta;
+}
+
+footer {
+  font-size: 80%;
+  display: flex;
+  min-height: 4rem;
+  padding: 0 5vw;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2000;
+  background: var(--background);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  header {
+    position: static;
+    height: 3rem;
+  }
+  header svg {
+    left: 0.5rem;
+    top: 0.5rem;
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+/*# sourceMappingURL=mc.css.map */
