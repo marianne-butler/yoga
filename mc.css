@@ -52,6 +52,8 @@ a {
   text-decoration: none;
   position: relative;
   display: block;
+  width: 10rem;
+  margin: auto;
   transition: font-variation-settings 0.15s;
 }
 a:link, a:visited, a:hover, a:active {
@@ -68,7 +70,7 @@ a:before {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 0.6rem;
+  height: 0.4rem;
   background: turquoise;
   opacity: 0.5;
   transition: opacity 0.15s;
@@ -79,28 +81,93 @@ a:hover {
 a:hover:before {
   opacity: 1;
 }
+footer a {
+  width: auto;
+}
 footer a:before {
   height: 0.3rem;
 }
 
 main {
   flex: 1;
+  overflow-y: auto;
   display: grid;
   grid-template-columns: 1fr max-content;
 }
 main:before {
+  position: sticky;
+  top: 0;
   content: "";
   background-image: url("marianne.png");
   background-size: cover;
   background-position: right bottom;
   margin-bottom: 3rem;
 }
-main iframe {
-  width: 100vw;
-  max-width: 700px;
-  margin-left: auto;
+main form {
+  height: 100%;
+  max-width: 100vw;
+  margin: 0 0 4rem auto !important;
   border-radius: 0 !important;
   background: transparent;
+}
+main form > * {
+  max-width: 30rem;
+  margin: 0 1rem;
+  padding: 0 3rem;
+}
+main form input.button {
+  color: var(--content) !important;
+  background: turquoise !important;
+}
+main form input.button:hover {
+  background: turquoise !important;
+}
+main form .brandingLogo {
+  display: none;
+}
+main form h2, main form h3, main form p {
+  max-width: 30rem;
+  margin: 0 auto;
+  text-align: center;
+  font-variation-settings: "wght" 300;
+}
+main form h2 strong, main form h3 strong, main form p strong {
+  font-variation-settings: "wght" 450;
+}
+main form h2 {
+  font-size: 2rem !important;
+  margin: 5rem auto 2rem !important;
+}
+main form h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem !important;
+}
+main form p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+main form #mce-responses #mce-success-response {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100% !important;
+}
+main form #mce-responses #mce-success-response:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  display: flex;
+  padding: 2rem;
+  background: var(--background-alt);
+  color: var(--content);
+  content: "Thankyou! I'll be in touch soon!";
 }
 
 header {
@@ -116,8 +183,8 @@ header svg {
   width: 6rem;
   height: 6rem;
   position: absolute;
-  top: 3rem;
-  right: 3rem;
+  top: 1rem;
+  right: 1rem;
 }
 header svg circle {
   fill: var(--background);
