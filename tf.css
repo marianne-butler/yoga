@@ -90,6 +90,9 @@ footer a:before {
 main {
   flex: 1;
 }
+main form {
+  height: 100%;
+}
 
 header {
   pointer-events: none;
