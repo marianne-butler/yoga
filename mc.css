@@ -82,12 +82,27 @@ a:hover:before {
   opacity: 1;
 }
 footer a {
+  margin-right: 0;
   width: auto;
+  text-align: right;
 }
 footer a:before {
   height: 0.3rem;
 }
-
+footer a:hover {
+  font-variation-settings: "wght" 600;
+}
+footer a[href="#mc_embed_signup_scroll"] {
+  padding: 0.7rem 1.1rem;
+  z-index: 10;
+  min-width: 9rem;
+  flex-shrink: 0;
+}
+footer a[href="#mc_embed_signup_scroll"]:before {
+  opacity: 1;
+  height: 100%;
+  border-radius: 0.3rem;
+}
 main {
   flex: 1;
   overflow-y: auto;
@@ -108,7 +123,6 @@ main form {
   max-width: 100vw;
   margin: 0 0 4rem auto !important;
   border-radius: 0 !important;
-  background: transparent;
 }
 main form > * {
   max-width: 30rem;
@@ -125,13 +139,13 @@ main form input.button:hover {
 main form .brandingLogo {
   display: none;
 }
-main form h2, main form h3, main form p {
+main form h2, main form h3, main form h4, main form p, main form ul {
   max-width: 30rem;
   margin: 0 auto;
   text-align: center;
   font-variation-settings: "wght" 300;
 }
-main form h2 strong, main form h3 strong, main form p strong {
+main form h2 strong, main form h3 strong, main form h4 strong, main form p strong, main form ul strong {
   font-variation-settings: "wght" 450;
 }
 main form h2 {
@@ -140,11 +154,21 @@ main form h2 {
 }
 main form h3 {
   margin-bottom: 1rem;
-  font-size: 1.4rem !important;
 }
-main form p {
+main form h4 {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-size: 2rem !important;
+}
+main form p, main form li {
   margin-bottom: 1rem;
   font-size: 1rem;
+}
+main form > div {
+  background: var(--background);
+  margin: 2rem auto 3rem;
+  padding: 2rem;
+  border-radius: 0.6rem;
 }
 main form #mce-responses #mce-success-response {
   position: absolute;
