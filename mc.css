@@ -154,6 +154,22 @@ main form #mce-responses #mce-success-response {
   bottom: 0;
   width: 100% !important;
 }
+main form #mce-responses #mce-success-response:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-items: center;
+  text-align: center !important;
+  display: flex;
+  padding: 2rem;
+  background: var(--background-alt);
+  color: var(--content);
+  font-size: 1.4rem;
+  content: "Thankyou!";
+}
 main form #mce-responses #mce-success-response:after {
   position: absolute;
   top: 0;
@@ -162,12 +178,11 @@ main form #mce-responses #mce-success-response:after {
   bottom: 0;
   align-items: center;
   justify-items: center;
-  text-align: center;
+  text-align: center !important;
   display: flex;
-  padding: 2rem;
-  background: var(--background-alt);
+  padding: 7rem 2rem 2rem;
   color: var(--content);
-  content: "Thankyou! I'll be in touch soon!";
+  content: "I'll be in touch soon to organise your chart reading";
 }
 
 header {
